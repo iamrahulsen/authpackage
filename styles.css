@@ -1,0 +1,197 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: radial-gradient(#4c0c0c, #000);
+    margin: 0;
+    position: relative;
+}
+
+.footer {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    width: 100%;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: white; /* Choose a color that fits the design */
+    font-size: 15px; /* Adjust font size as needed */
+}
+
+.container {
+    position: absolute;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 112px; /* Adjust as needed */
+    width: 100%;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #dd7732; /* Choose a color that fits the design */
+    font-size: 40px; /* Adjust font size as needed */
+}
+
+.container p {
+    font-size: 2rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container p span.typed-text {
+    font-weight: normal;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: whitesmoke;
+}
+
+.container p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  .container p span.cursor.typing {
+    animation: none;
+}
+
+ 
+.heart-container {
+    position: relative; 
+}
+
+.heart {
+    width: 200px; /* Increased size of the heart */
+    height: 180px; /* Increased size of the heart */
+    position: relative;
+    background-color: red;
+    transform: rotate(-45deg);
+    box-shadow: 0 0 140px red, 0 0 80px red; /* Enhanced glowing effect */
+    transition: box-shadow 0.75s ease-in-out; /* Smooth transition for glow effect */
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    position: absolute;
+    width: 200px; /* Increased size to match the heart */
+    height: 200px; /* Increased size to match the heart */
+    background-color: red;
+    border-radius: 50%;
+    top: -100px; /* Adjusted to fit the increased size */
+    left: 0;
+    box-shadow: 0 0 140px red, 0 0 80px red; /* Enhanced glowing effect */
+}
+
+.heart:after {
+    left: 84px; /* Adjusted to fit the increased size */
+    top: -19.25px; /* Adjusted to fit the increased size */
+}
+
+.heart:hover {
+    box-shadow: 0 0 200px red, 0 0 150px red; /* Increased glow when hovered */
+}
+
+.overlay-text {
+    position: absolute;
+    text-shadow: 0 0 30px white, 0 0 30px white, 0 0 30px white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52%, -85%);
+    font-size: 60px; /* Larger font size for visibility */
+    color: white; /* Color of the text */
+    font-family: "Lucida Console", "Courier New", monospace;
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 0.75s ease-in-out; /* Smooth transition for opacity */
+}
+
+.heart-container:hover .overlay-text {
+    opacity: 1; /* Fully visible when hovered */
+}
+
+#heart-emoji-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    pointer-events: none;
+  }
+  
+.drop{
+    position: absolute; 
+    top: 40px;
+    width: 30px; 
+    height: 30px; 
+    transform: rotate(0deg);
+    filter: drop-shadow(5px 5px 10px #000) drop-shadow(0px 0px 10px #f00);
+    transform-origin: bottom;
+    animation: animate 4s linear forwards;
+    z-index: -1
+}
+
+.drop::before {
+    content: '';
+    position: absolute;
+    width: 20px; 
+    height: 30px; 
+    background: #f00; 
+    transform: rotate(0deg);
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px; 
+    transform-origin: bottom center; 
+    rotate: -45deg; /* Set rotation to 0 to make the drop fall straight */
+    z-index: 100000;
+} 
+
+.drop::after {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    width: 30px; 
+    height: 20px; 
+    background: #f00; 
+    transform: rotate(0deg);
+    border-top-right-radius: 20px; 
+    border-bottom-right-radius: 20px; 
+    transform-origin: bottom center; 
+    rotate: 315deg; /* Set rotation to 0 to make the drop fall straight */
+    z-index: 100000;
+}
+
+@keyframes animate {
+    0%
+    {
+        top: 40px;
+        opacity: 1;
+        scale: 1;
+    }
+    70%
+    {
+        top: 400px;
+        opacity: 1;
+    }
+    80%
+    {
+        top: 400px;
+    }
+    100%
+    {
+        top: 400px;
+        opacity: 0;
+        scale: 0;
+    }
+    
+}
+@keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+  }
