@@ -22,7 +22,7 @@ setInterval(function(){
 // wring part
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
-const textArray = ["Hey Raya!", "Look here!","I am in a hurry, but...","I want to tell you something!", "\'When I saw you I stopped using Google\'", "Do you know why?", "\'Because I knew the search was over\'", "Haha! Now, you might be thinking \'Rahul googled this cheesy line\'","But how can I? I already stopped using Google! xD", "Ok Bye! you continue smilling!","eta rakho <3"];
+const textArray = ["Hey Raya!", "Look here!","I am in a hurry, but...","I want to tell you something!", "\'When I saw you I stopped using Google\'", "Do you know why?", "\'Because I knew the search was over\'", "Haha! Now, you might be thinking \'Rahul googled this cheesy line\'","But how can I? I already stopped using Google! xD", "Ok Bye! you continue smiling!","eta rakho <3"];
 const typingDelay = 50;
 const erasingDelay = 25;
 const newTextDelay = 4000; // Delay between current and next text
