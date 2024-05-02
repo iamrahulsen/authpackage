@@ -11,12 +11,18 @@ body {
 
 .footer {
     position: absolute;
-    bottom: 10px; /* Adjust as needed */
+    opacity: 0; /* Start with hidden footer */
+    bottom: 10px;
     width: 100%;
     text-align: center;
     font-family: "Lucida Console", "Courier New", monospace;
-    color: white; /* Choose a color that fits the design */
-    font-size: 15px; /* Adjust font size as needed */
+    color: white;
+    font-size: 15px;
+    transition: opacity 0.75s ease-in-out; /* Smooth transition for opacity */
+}
+
+.heart-container:hover ~ .footer {
+    opacity: 1; /* Show footer when hovering over the "Raya" text */
 }
 
 .container {
@@ -109,7 +115,7 @@ body {
     transition: opacity 0.75s ease-in-out; /* Smooth transition for opacity */
 }
 
-.heart-container:hover .overlay-text {
+.heart-container:hover .overlay-text:hover{
     opacity: 1; /* Fully visible when hovered */
 }
 
